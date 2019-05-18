@@ -2,7 +2,7 @@ class Config:
     '''
     General configuration parent class
     '''
-    MOVIE_API_BASE_URL ='https://newsapi.org/v2/top-headlines -G /-d country=us/-d apiKey={}'
+NEWS_API_BASE_URL ='https://newsapi.org/v2/top-headlines?country=us&apiKey=7723e3d4015244ffa335f2e75abe5dbb'
 
 class ProdConfig(Config):
     '''
