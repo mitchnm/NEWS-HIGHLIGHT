@@ -2,7 +2,7 @@ class Config:
     '''
     General configuration parent class
     '''
-    pass
+    MOVIE_API_BASE_URL ='https://newsapi.org/v2/top-headlines -G /-d country=us/-d apiKey={}'
 
 class ProdConfig(Config):
     '''

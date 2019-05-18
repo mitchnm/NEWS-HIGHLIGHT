@@ -6,8 +6,8 @@ def index():
   '''
   view the first page
   '''
-  message = 'NGAMIA WEWE'
-  return render_template('index.html',message = 'NGAMIA WEWE') 
+  title = 'Home - Welcome to The best Movie Review Website Online'
+  return render_template('index.html',title = title) 
 
 @app.route('/news/<int:news_id>')
 def movie(news_id):
