@@ -15,36 +15,53 @@
 </head>
 
 <body>
-  {% block content %}
+  {% block content%}
+<link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+<h1 class='pagename'>Mega News</h1>
+<h3>News for everyone</h3>
 
-
-  <ul style="decoration:none;">
-    <div style="font-size:15px; color:#2c4f7c;" class="container">
-      <marquee style=" font-size:20px; font-family: 'Handlee', cursive;">Catch up on the latest news from all around the
-        world <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Breathe-face-smile.svg/220px-Breathe-face-smile.svg.png"
-          height="30px"></marquee>
-      <div class="row">
-        {% for item in enter%}
-        <div class="col-md-4">
-          <div class="thumbnail">
-            <li style="color:#3a4a84; list-style-type: none; font-size:20px;">{{item.name}}</li>
-            <hr>
-
-            <h6 style="text-decoration:underline;">More about {{ item.name }}</h6>
-            <p style="color:black; font-family: 'Handlee', cursive;">{{ item.description }}</p>
-            <hr>
-
-            <a href="/articles/{{item.id}}"><button style=" border:1px solid black;"
-                class="btn btn-sm">Visit</button></a>
-
-          </div>
-        </div>
-        {% endfor %}
-      </div>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 my-3" style="padding-bottom: 20px;">
+    <!-- General News -->
+    <h3>General News!</h3>
+    <hr>
+    <div class="is-flex border border-info py-3" style="display: flex; flex-wrap: wrap;">
+        {{macro.displaySourceList(general)}}
     </div>
-  </ul>
-  {% endblock %}
+</div>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background:#FBFCFC; padding-bottom: 50px;">
+    <!-- Business News -->
+    <h3>Business News Sources</h3>
+    <hr>
+    <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+        {{macro.displaySourceList(business)}}
+    </div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-bottom: 50px;">
+    <!-- Technology News -->
+    <h3>Technology News Sources</h3>
+    <hr>
+    <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+        {{macro.displaySourceList(technology)}}
+    </div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background:#FBFCFC; padding-bottom: 50px;">
+    <!-- Sports News -->
+    <h3>Sports News Sources</h3>
+    <hr>
+    <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+        {{macro.displaySourceList(sports)}}
+    </div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-bottom: 50px;">
+    <!-- Entertainment News -->
+    <h3>Entertainment News Sources</h3>
+    <hr>
+    <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+        {{macro.displaySourceList(entertainment)}}
+    </div>
+</div>
+{%endblock%}
 </body>
 
 </html>
