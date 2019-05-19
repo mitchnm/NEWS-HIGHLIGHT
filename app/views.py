@@ -32,9 +32,9 @@ def source(id):
     View source page.
     '''
     all_articles = get_articles(id)
-    title = f'NewsApp -- {id.upper()}'
-    id_up = id.upper()
+    title = f'NewsApp -- {id}'
+    id_id = id
 
-    return render_template('article.html', articles=all_articles, title=title, id_up=id_up)
+    return render_template('article.html', articles=all_articles, title=title, id_id=id_id)
 
 
