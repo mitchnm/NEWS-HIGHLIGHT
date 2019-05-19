@@ -1,24 +1,19 @@
 import unittest
-from .models.news import Articles
-
-
+from .models.news import Articles,Source
 class ArticleTest(unittest.TestCase):
 
-    '''
-    Test Class to test the behaviour of the Source class
-    '''
+    def test_article(self):
+        '''
+        test_source checks that new news source objects are created
+        '''
+        self.new_article = Articles('me','bbc-news','Jesus','is alive','eng')
+        self.assertTrue(isinstance(self.new_article,Articles))
 
-    def setUp(self):
-        '''
-        Set up method that will run before every Test
-        '''
-        self.new_article = Articles(' author', 'title', 'desc', 'url', 'image')
+class SourceTest(unittest.TestCase):
 
-    def test_instance(self):
+    def test_source(self):
         '''
-           This method will test if self.new_article is an object of the article class.
+        test_source checks that new news source objects are created
         '''
-        self.assertTrue(isinstance(self.new_article, Articles))
-
-if __name__ == '__main__':
-    unittest.main()
+        self.new_source = Source('bbc-news','Jesus','is alive','eng','who',)
+        self.assertTrue(isinstance(self.new_source,Source))

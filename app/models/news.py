@@ -10,12 +10,10 @@ class Source:
         self.url = url
         self.category = category
 
-
 class Articles:
     '''
     Articles class to define Articles Objects
     '''
-
     def __init__(self, title, image, description, url, date):
         self.title = title
         self.image = image
