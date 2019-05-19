@@ -14,21 +14,21 @@ class Source:
     Movie class to define Movie Objects
     '''
 
-    def __init__(self, id, name, description):
-        self.id =id
+    def __init__(self, id, name, description, url, category):
+        self.id = id
         self.name = name
         self.description = description
+        self.url = url
+        self.category = category
 
 class Articles:
     '''
     defines the articles objects
     '''
 
-    def __init__(self, blue, id, title, author, description, urlToImage, publishedAt, url):
-        self.blue = blue
+    def __init__(self, title, image, description, url, date):
         self.title = title
-        self.author = author
+        self.image = image
         self.description = description
-        self.urlToImage = urlToImage
-        self.publishedAt = publishedAt
         self.url = url
+        self.date = date
