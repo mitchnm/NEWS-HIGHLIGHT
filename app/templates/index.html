@@ -1,65 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html'%}
+{% import 'macros.html' as macro %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- 
-  {% extends 'base.html'%}
-  {% import 'macros.html' as macro%}
+{% block content%}
+<div class="container">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
 
-</head>
-
-<body>
-  {% block content%}
-<link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
-<link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
-<h1 class='pagename'>Mega News</h1>
-<h3>News for everyone</h3>
-
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 my-3" style="padding-bottom: 20px;">
-    <!-- General News -->
-    <h3>General News!</h3>
-    <hr>
-    <div class="is-flex border border-info py-3" style="display: flex; flex-wrap: wrap;">
+    <div style="padding-bottom: 20px;">
+        <h3><u><strong>GENERAL NEWS</strong></u></h3>
         {{macro.displaySourceList(general)}}
-        <h3>{{ science_sources.title }}</h3>
     </div>
-</div>
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background:#FBFCFC; padding-bottom: 50px;">
-    <!-- Business News -->
-    <h3>Business News Sources</h3>
-    <hr>
-    <div class="is-flex" style="display: flex; flex-wrap: wrap;">
-        {{macro.displaySourceList(business)}}
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background:#FBFCFC; padding-bottom: 50px;">
+        <!-- Business News -->
+        <h3><u><strong>BUSINESS NEWS</strong></u></h3>
+        <hr>
+        <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+            {{macro.displaySourceList(business)}}
+        </div>
     </div>
-</div>
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-bottom: 50px;">
-    <!-- Technology News -->
-    <h3>Technology News Sources</h3>
-    <hr>
-    <div class="is-flex" style="display: flex; flex-wrap: wrap;">
-        {{macro.displaySourceList(technology)}}
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-bottom: 50px;">
+        <!-- Technology News -->
+        <h3><u><strong>TECHNOLOGY NEWS</strong></u></h3>
+        <hr>
+        <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+            {{macro.displaySourceList(technology)}}
+        </div>
     </div>
-</div>
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background:#FBFCFC; padding-bottom: 50px;">
-    <!-- Sports News -->
-    <h3>Sports News Sources</h3>
-    <hr>
-    <div class="is-flex" style="display: flex; flex-wrap: wrap;">
-        {{macro.displaySourceList(sports)}}
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background:#FBFCFC; padding-bottom: 50px;">
+        <!-- Sports News -->
+        <h3><u><strong>SPORT NEWS</strong></u></h3>
+        <hr>
+        <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+            {{macro.displaySourceList(sports)}}
+        </div>
     </div>
-</div>
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-bottom: 50px;">
-    <!-- Entertainment News -->
-    <h3>Entertainment News Sources</h3>
-    <hr>
-    <div class="is-flex" style="display: flex; flex-wrap: wrap;">
-        {{macro.displaySourceList(entertainment)}}
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-bottom: 50px;">
+        <!-- Entertainment News -->
+        <h3><u><strong>ENTERTAINMENT NEWS</strong></u></h3>
+        <hr>
+        <div class="is-flex" style="display: flex; flex-wrap: wrap;">
+            {{macro.displaySourceList(entertainment)}}
+        </div>
     </div>
 </div>
 {%endblock%}
-</body>
-
-</html>

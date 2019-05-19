@@ -1,17 +1,6 @@
-class News:
-    '''
-    Movie class to define Movie Objects
-    '''
-
-    def __init__(self,id,source,article,image,):
-        self.id =id
-        self.source = source
-        self.article = article
-        self.image= 'https://image.tmdb.org/t/p/w500/'+ image
-        
 class Source:
     '''
-    Movie class to define Movie Objects
+    Source class to define Source Objects
     '''
 
     def __init__(self, id, name, description, url, category):
@@ -21,9 +10,10 @@ class Source:
         self.url = url
         self.category = category
 
+
 class Articles:
     '''
-    defines the articles objects
+    Articles class to define Articles Objects
     '''
 
     def __init__(self, title, image, description, url, date):
