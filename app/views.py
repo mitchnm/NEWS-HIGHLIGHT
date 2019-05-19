@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, request, redirect, url_for
 from app import app
 from .request import get_sources, get_articles
 
@@ -9,13 +9,8 @@ def index():
   '''
   title = 'Home'
   science_sources = get_sources('science')
-  business_sources = get_sources('business') 
-  entertainment_sources = get_sources('entertainment')
-  general_sources = get_sources('general')
-  health_sources = get_sources('health')
-  sports_sources = get_sources('sports')
-  technology_sources = get_sources('technology')
-  return render_template('index.html',title = title,science=science_sources, business=business_sources, entertainment=entertainment_sources, sports=sports_sources, health=health_sources, general=general_sources, technology=technology_sources) 
+
+  return render_template('index.html',title = title, science=science_sources) 
 
 @app.route('/articles/<int:id>')
 def articles(id):

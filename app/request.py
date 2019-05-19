@@ -1,7 +1,7 @@
 from app import app
 import urllib.request,json
 from .models.news import Source, Articles
-
+ 
 api_key = None
 base_url = None
 articles_url = None
@@ -21,7 +21,7 @@ def get_sources(category):
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)
         source_results = None
-        if get_sources_response["sources"]:
+        if get_sources_response['sources']:
             source_results_list = get_sources_response["sources"]
             source_results = process_results(source_results_list)
     return source_results
@@ -85,4 +85,4 @@ def receive_results(articles_list):
         date = articles_item.get('publishedAt')
         articles_object = Articles (title , author, description, url, date)
         articles_results.append(articles_object)
-    return articles_results
+    return articles_results  
