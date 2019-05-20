@@ -1,18 +1,21 @@
 {% macro displaySourceList(source_list) %}
-<div class="row">
-  {% for source in source_list %}
-  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="padding-bottom:20%;">
-    <h4 style="font-family: 'Permanent Marker', cursive; font-size: 150%;">{{source.name}}</h4>
-    <p>{{source.description}}</p>
-    <a href="/source/{{source.id}}" class="btn btn-primary" target="_blank">{{source.name}}</a>
+<div class="container">
+  <div class="row">
+    {% for source in source_list %}
+    <div class="col-md-6" style="padding-bottom:5%;">
+      <h4 style="font-family: 'Permanent Marker', cursive; font-size: 150%;">{{source.name}}</h4>
+      <p>{{source.description}}</p>
+      <a href="/source/{{source.id}}" class="btn btn-primary" target="_blank">{{source.name}}</a>
+    </div>
+
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
 {% endmacro %}
 
-{% macro displayArticlesList(articles_list) %}
-<div class="container-fluid">
+<div class="container">
   <div class="row">
+    {% macro displayArticlesList(articles_list) %}
     {% for article in articles_list %}
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="padding-bottom: 10%;">
       <img class="img-responsive" src="{{article.image}}" alt="image">
@@ -21,6 +24,6 @@
       <a href="{{article.url}}">Read more</a>
     </div>
     {% endfor %}
+    {% endmacro %}
   </div>
 </div>
-{% endmacro %}
