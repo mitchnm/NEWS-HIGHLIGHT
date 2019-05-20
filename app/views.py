@@ -35,6 +35,6 @@ def source(id):
     title = f'NewsApp -- {id}'
     id_id = id
 
-    return render_template('article.html', articles=all_articles, title=title, id_id=id_id)
+    return render_template('articles.html', articles=all_articles, title=title, id_id=id_id)
 
 

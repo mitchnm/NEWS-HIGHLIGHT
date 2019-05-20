@@ -8,18 +8,12 @@
 <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
 {% endblock %}
 
-<!-- BLOCK CONTENT -->
 {% block content %}
 <div class="container-fluid">
 
     <div class="articles">
-        <h3><img src="../static/images/logo.jpg" alt="" width="150px" height="90px"> | {{id}} | Top News Articles</h3>
-        <hr />
-        <ul class="unstyled">
-            <div>
-                {{ macro.displayArticlesList(articles) }}
-            </div>
-        </ul>
+        <h3>Top News Articles</h3>
+        {{ macro.displayArticlesList(articles) }}
     </div>
 </div>
 {% endblock %}
