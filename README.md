@@ -1,10 +1,8 @@
 # NEWS-HIGHLIGHT
 
 #### Description
-
+This is an app where news is displayed from many different sources..one can visit the different sources by just clicking on its name on the first page. 
 #### By **MITCH MUHU**
-
-
 
 ## Technologies used
 1. Python3.7
