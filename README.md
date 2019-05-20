@@ -23,9 +23,9 @@
 * sudo apt-get install python3.6-venv
 * python3.6 -m venv virtual
 * source virtual/bin/activate
-##### Installing dependencies
+### Installing dependencies
 pip install -r requirements
-##### Running Tests
+### Running Tests
 python -m unittest tests/test_models.py
 ##### Running in development
 python run.py
@@ -41,7 +41,7 @@ heroku create appname
 * Make sure you have committed all changes then run
 * git push heroku master
 
-###LICENSE
+### LICENSE
 MIT License
 
 Copyright (c) 2019 mitchnm

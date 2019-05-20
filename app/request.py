@@ -1,6 +1,5 @@
-from app import app
 import urllib.request,json
-from .models.news import Source, Articles
+from .news import Source, Articles
  
 api_key = None
 base_url = None
@@ -80,16 +79,3 @@ def process_articles(articles_list):
     return articles_results
 
 
-def search_articles(query):
-    '''
-    Function that gets the json response to our articles search url request.
-    '''
-    search_articles_url = 'https://newsapi.org/v2/everything?q={}&apiKey={}'.format(query, api_key)
-    with urllib.request.urlopen(search_articles_url) as url:
-        search_articles_data = url.read()
-        search_articles_response = json.loads(search_articles_data)
-        search_articles_results = None
-        if search_articles_response['articles']:
-            search_articles_list = search_articles_response['articles']
-            search_articles_results = process_articles(search_articles_list)
-    return search_articles_results
