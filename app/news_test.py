@@ -1,7 +1,7 @@
 import unittest
-from .models.news import Articles,Source
-class ArticleTest(unittest.TestCase):
+from app.models.news import Articles, Source
 
+class ArticlesTest(unittest.TestCase):
     def test_article(self):
         '''
         test_source checks that new news source objects are created
@@ -10,7 +10,6 @@ class ArticleTest(unittest.TestCase):
         self.assertTrue(isinstance(self.new_article,Articles))
 
 class SourceTest(unittest.TestCase):
-
     def test_source(self):
         '''
         test_source checks that new news source objects are created
