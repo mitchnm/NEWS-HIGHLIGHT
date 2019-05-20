@@ -17,6 +17,15 @@ This is an app where news is displayed from many different sources..one can visi
 * Run the application using _./start.sh_ command
 * Click on the link on the terminal as you press ctrl and use the application in the browser
 
+### BDD
+|Behavior                         |input                                     |output                                   |
+|---------------------------------|------------------------------------------|-----------------------------------------|
+|View the General sources.        | Click on a link of your preferred source.|Read through your preferred news article.|
+|View the Business sources.       | Click on a link of your preferred source.|Read through your preferred news article.|
+|View the Technology sources.     | Click on a link of your preferred source.|Read through your preferred news article.|
+|View the Sports sources.         | Click on a link of your preferred source.|Read through your preferred news article.|
+|View the Entertainment sources.  | Click on a link of your preferred source.|Read through your preferred news article.|
+
 ##### Creating a virtual environment
 * sudo apt-get install python3.6-venv
 * python3.6 -m venv virtual
