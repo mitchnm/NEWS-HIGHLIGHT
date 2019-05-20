@@ -39,7 +39,7 @@ def process_results(source_list):
         id = source_item.get('id')
         name = source_item.get('name')
         description = source_item.get('description')
-        url = source_item.get('url')
+        url = source_item.get('url') 
         category = source_item.get('category')
         source_object = Source(id, name, description, url, category)
         source_results.append(source_object)
