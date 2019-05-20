@@ -41,7 +41,7 @@ heroku create appname
 * Make sure you have committed all changes then run
 * git push heroku master
 
-### LICENSE
+###  LICENSE
 MIT License
 
 Copyright (c) 2019 mitchnm

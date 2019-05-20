@@ -18,4 +18,4 @@ class Articles:
         self.image = image
         self.description = description
         self.url = url
-        self.date = date
+        self.date = date 
