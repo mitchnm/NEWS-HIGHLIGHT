@@ -1,11 +1,10 @@
 # NEWS-HIGHLIGHT
-News highlight is an application that gives a user an easy time locating the kind of news they
-want to follow up on by the category or by the source
 
-### Author
-MITCH MUHU
-### Date made
-*17/5/2019*
+#### Description
+
+#### By **MITCH MUHU**
+
+
 
 ## Technologies used
 1. Python3.7
@@ -31,8 +30,8 @@ python -m unittest tests/test_models.py
 ##### Running in development
 python run.py
 Open the app on your browser, by default on 127.0.0.1:5000.
-Deploying to heroku
-Make sure you have requirements.txt
+## Deploying to heroku
+* Make sure you have requirements.txt
 * should be in virtual
 * pip freeze > requirements.txt
 * create a Procfile with the following content
