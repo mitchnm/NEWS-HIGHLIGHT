@@ -1,5 +1,5 @@
 import unittest
-from app.news import Articles, Source 
+from app.news import Articles
 
 class ArticlesTest(unittest.TestCase):
     def test_article(self):
