@@ -11,7 +11,7 @@ def index():
     View root page.
     ''' 
 
-    title = 'Home - NewsApp'
+    title = 'Home'
 
     business_sources = get_sources('business')
 
@@ -32,7 +32,7 @@ def source(id):
     View source page.
     '''
     all_articles = get_articles(id)
-    title = f'NewsApp -- {id}'
+    title = f'NewsApp/{id}'
     id_id = id
 
     return render_template('articles.html', articles=all_articles, title=title, id_id=id_id)
